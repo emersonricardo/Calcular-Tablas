@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Tabla";
+    int vueltas =1;
+}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+
+    </div>
+    <div class="panel-body">
+        <form action="Tabla" method="post">
+            <div>
+                <input type="text" class="form-control" name="txttabla" value="" autocomplete="off" placeholder="Introdusca un numero" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-default btn-lg">EMVIAR</button>
+            </div>
+
+        </form>
+       
+            @if (ViewBag.datos == true)
+            {
+        <div class="alert alert-success">
+            @while (vueltas <= 10)
+            {
+                <hi>@ViewBag.tabla x @vueltas = @(ViewBag.tabla*vueltas)</hi><br />
+                vueltas = vueltas + 1;
+            }
+
+        </div>
+               
+
+            }
+
+     
+    </div>
+</div>
+
